@@ -1,0 +1,4 @@
+# Test-only dependencies. The app itself needs nothing beyond requirements.txt.
+#   .venv\Scripts\python.exe -m pip install -r requirements-dev.txt
+#   .venv\Scripts\python.exe -m pytest tests -q
+pytest>=7.0

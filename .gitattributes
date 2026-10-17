@@ -1,0 +1,22 @@
+# Keep every text file LF in the repository, whatever the working OS does.
+#
+# Windows KiCad writes CRLF on save, Linux KiCad writes LF (verified 2026-08-08:
+# the same board saved on each machine differs only by 149663 CRLF/LF pairs).
+# Without normalisation, every save on one machine is a whole-file diff on the
+# other. `eol=lf` converts on commit, so the committed bytes are identical no
+# matter which machine did the save.
+* text=auto eol=lf
+
+# Binary — never touch these.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.pdf   binary
+*.gz    binary
+*.zip   binary
+*.otf   binary
+*.ttf   binary
+*.sldprt binary
+*.sldasm binary
+*.elibz binary
+*.3dshapes binary

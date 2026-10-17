@@ -1,0 +1,34 @@
+{
+  "rootFiles": [
+    ".gitattributes",
+    "LICENSE",
+    "TODO.md",
+    "gerber2laser.py",
+    "requirements.txt",
+    "requirements-dev.txt"
+  ],
+  "untrackedOk": [
+    "docs/research/",
+    "docs/archive/"
+  ],
+  "groupedDirs": {
+    "tools": [
+      "icons",
+      "screenshots"
+    ]
+  },
+  "tests": {
+    "dir": "tests",
+    "pattern": "^(test_[a-z0-9_]+|conftest)[.]py$",
+    "subdirs": [
+      "helpers",
+      "fixtures"
+    ],
+    "runners": []
+  },
+  "docsSubdirs": [
+    "research",
+    "archive",
+    "images"
+  ]
+}

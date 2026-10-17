@@ -1,0 +1,6 @@
+#!/bin/sh
+# Repo layout check (CLAUDE.md, Repo layout) on every commit: a commit that leaves the repo messy
+# stops here. Fix the layout (move, document, log the move in docs/moves.md); never --no-verify.
+# Turn on once per clone: git config core.hooksPath .githooks
+PY=$(command -v python3 || command -v python) || { echo "pre-commit: python not found, layout not checked"; exit 1; }
+"$PY" .githooks/layout_check.py || { echo "pre-commit: repo layout check failed (see above)"; exit 1; }

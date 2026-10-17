@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <title>gerber2laser</title>
+  <defs>
+    <linearGradient id="board" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f4d3a"/>
+      <stop offset="1" stop-color="#123125"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff3b30" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ff2d20" stop-opacity="0.95"/>
+    </linearGradient>
+    <radialGradient id="burst" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff6d5"/>
+      <stop offset="0.45" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#ff3b30" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- copper-clad blank -->
+  <rect x="26" y="46" width="204" height="164" rx="18" fill="url(#board)"/>
+  <rect x="26" y="46" width="204" height="164" rx="18" fill="none"
+        stroke="#0b1b14" stroke-width="6"/>
+
+  <!-- copper: thick enough to survive a 24 px icon -->
+  <g fill="none" stroke="#e8a33d" stroke-width="13"
+     stroke-linecap="round" stroke-linejoin="round">
+    <path d="M52 176 L52 128 L96 84 L146 84"/>
+    <path d="M52 100 L74 100"/>
+    <path d="M96 176 L140 176 L172 144 L204 144"/>
+  </g>
+  <g fill="#e8a33d">
+    <circle cx="52" cy="176" r="16"/>
+    <circle cx="204" cy="144" r="16"/>
+    <circle cx="96" cy="176" r="13"/>
+  </g>
+  <!-- drilled holes: the board colour punched back through the pads -->
+  <g fill="#123125">
+    <circle cx="52" cy="176" r="6.5"/>
+    <circle cx="204" cy="144" r="6.5"/>
+  </g>
+
+  <!-- laser beam and the spot it ablates -->
+  <path d="M236 8 L252 30 L150 106 L134 84 Z" fill="url(#beam)"/>
+  <circle cx="143" cy="95" r="40" fill="url(#burst)"/>
+  <circle cx="143" cy="95" r="11" fill="#fffbe8"/>
+</svg>
